@@ -29,7 +29,6 @@ figure {
 }
 
 .container {
-  color: var(--main-colour);
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   column-gap: 5px;
@@ -48,7 +47,6 @@ figure {
   grid-template-columns: 1fr;
   grid-auto-rows: 1fr 2fr;
   padding: 0 50px;
-  /* border-bottom: 5px solid #323230; */
 }
 
 .header-left li {
@@ -75,7 +73,6 @@ figure {
 
 .header-right {
   grid-area: header-right;
-  /* border-bottom: 5px solid #323230; */
 }
 
 .header-right img, .project img {
@@ -108,4 +105,41 @@ footer {
   padding: 20px 0;
   text-align: center;
   grid-area: footer;
+}
+
+@media only screen and (max-width: 1200px) {
+  .container {
+    grid-template-areas:
+      "header-left header-left header-left"
+      "header-right header-right header-right"
+      "featured-project featured-project project-1"
+      "featured-project featured-project project-2"
+      "project-3 project-4 project-4"
+      "footer footer footer"
+      ;
+  }
+  .header-right {
+    height: 350px;
+  }
+
+  .header-right img {
+    height: 350px;
+    object-position: center top;
+  }
+}
+
+@media only screen and (max-width: 1000px) {
+  .container {
+    grid-template-areas:
+    "header-left header-left header-left"
+    "header-right header-right header-right"
+    "featured-project featured-project featured-project"
+    "featured-project featured-project featured-project"
+    "project-1 project-1 project-1"
+    "project-2 project-2 project-2"
+    "project-3 project-3 project-3"
+    "project-4 project-4 project-4"
+    "footer footer footer"
+    ;
+  }
 }
