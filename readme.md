@@ -37,7 +37,7 @@ The finished index.html page looks like the following screenshots:
 
 ## 1000px Breakpoint
 
-<img src="./img/1000px-breakpoint.png" width="600">
+<img src="./img/1000px-breakpoint.png" width="300">
 
 ## Credits
 
